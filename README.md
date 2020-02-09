@@ -1,6 +1,4 @@
-# Machine Learning Interview
-
-## Machine learning interview questions and answers 
+# Machine Learning Interview Questions and Answers
 
 This list was compiled while preparing for AI Residency programs in Google, Facebook, Microsoft, Uber etc.
 
