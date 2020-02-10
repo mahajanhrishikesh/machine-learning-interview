@@ -124,6 +124,141 @@ Eigendecomposition of a matrix is a type of decomposition that involves decompos
 
 
 
+## Model and feature selection
+
+#### 1. Why are model selection methods needed?
+
+Model selection refers to the problem of selecting a few representative models from a large set of computational models for the purpose of decision making or optimization under uncertainty.
+
+#### 2. How do you do a trade-off between bias and variance?
+
+Bias is the simplifying assumptions made by the model to make the target function easier to approximate.
+Variance is the amount that the estimate of the target function will change given different training data.
+Trade-off is tension between the error introduced by the bias and the variance.
+
+#### 3. What are the different attributes that can be selected by model selection methods?
+
+Attribute selection measure is a heuristic for selecting the splitting criterion that “best” separates a given data partition, D, of a class-labeled training tuples into individual classes.
+
+#### 4. Why is cross-validation required?
+
+Cross Validation is a very useful technique for assessing the effectiveness of your model, particularly in cases where you need to mitigate overfitting. It is also of use in determining the hyper parameters of your model, in the sense that which parameters will result in lowest test error.
+
+#### 5. Describe different cross-validation techniques.
+
+Cross Validation is a technique which involves reserving a particular sample of a dataset on which you do not train the model. Later, you test your model on this sample before finalizing it.
+
+#### 6. What is hold-out cross validation? What are its advantages and disadvantages?
+
+Hold-out is when you split up your dataset into a 'train' and 'test' set. The training set is what the model is trained on, and the test set is used to see how well that model performs on unseen data.
+
+#### 7. What is k-fold cross validation? What are its advantages and disadvantages?
+
+K fold cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample. The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into.
+Advantages:
+(1) No randomness of using some observations for training.
+(2) As validation set is larger than in LOOCV, it gives less variability in test-error as more observations are used for each iteration's prediction.
+Disadvantages:
+The disadvantage of this method is that the training algorithm has to be rerun from scratch k times, which means it takes k times as much computation to make an evaluation.
+
+#### 8. What is leave-one-out cross validation? What are its advantages and disadvantages? 
+
+Leave-one-out cross validation is K-fold cross validation taken to its logical extreme, with K equal to N, the number of data points in the set. That means that N separate times, the function approximator is trained on all the data except for one point and a prediction is made for that point.
+
+#### 9. Why is feature selection required?
+
+Feature selection methods can be used to identify and remove unneeded, irrelevant and redundant attributes from data that do not contribute to the accuracy of a predictive model or may in fact decrease the accuracy of the model.
+
+#### 10. Describe some feature selection methods.
+
+There are two main types of feature selection techniques: wrapper and filter methods.
+Filter-based feature selection methods use statistical measures to score the correlation or dependence between input variables that can be filtered to choose the most relevant features.
+
+#### 11. What is forward feature selection method? What are its advantages and disadvantages?
+
+Forward Selection: Forward selection is an iterative method in which we start with having no feature in the model. In each iteration, we keep adding the feature which best improves our model till an addition of a new variable does not improve the performance of the model.
+
+#### 12. What is backward feature selection method? What are its advantages and disadvantages?
+
+Backward selection starts with all features contained in the dataset. It then runs a model and calculates a p-value associated with the t-test or F-test of the model for each feature. The feature with the largest insignificant p-value will then be removed from the model, and the process starts again.
+
+#### 13. What is filter feature selection method and describe two of them?
+
+Filter method: selecting a subset of features by a measure other than error (a measure that is inherent to the feature and not dependent on a model).
+
+#### 14. What is mutual information and KL divergence?
+
+Mutual information is a symmetric measure, i.e. I(X;Y)=I(Y;X). However KL-Distance is an asymmetric measure: D(P||Q) not equal D(Q||P).
+
+#### 15. Describe KL divergence intuitively.
+
+Very often in Probability and Statistics we'll replace observed data or a complex distributions with a simpler, approximating distribution. KL Divergence helps us to measure just how much information we lose when we choose an approximation.
+
+## Support Vector Machine
+
+#### 1. How can the SVM optimization function be derived from the logistic regression optimization function?
+
+SVM try to maximize the margin between the closest support vectors while LR the posterior class probability. Thus, SVM find a solution which is as fare as possible for the two categories while LR has not this property.
+
+#### 2. What is a large margin classifier?
+
+The Maximal-Margin Classifier is a hypothetical classifier that best explains how SVM works in practice.
+
+#### 3. Why SVM is an example of a large margin classifier? 
+
+It maximizes the margin of the hyperplane. This is the best hyperplane because it reduces the generalization error the most. If we add new data, the Maximum Margin Classifier is the best hyperplane to correctly classify the new data.
+
+#### 4. SVM being a large margin classifier, is it influenced by outliers?
+
+SVM is not very robust to outliers. Presence of a few outliers can lead to very bad global misclassification. SVM is not very robust to outliers. 
+
+#### 5. What is the role of C in SVM?
+
+C is a regularization parameter that controls the trade off between the achieving a low training error and a low testing error that is the ability to generalize your classifier to unseen data. 
+
+#### 6. In SVM, what is the angle between the decision boundary and theta?
+
+The vector theta has to be perpendicular to decision boundary.. Because the goal here is to maximize the margin. ... To understand this think as if you want to calculate the distance of point from line1 which can be done by projecting the point on to the line perpendicular to line1.
+
+#### 7. What is the mathematical intuition of a large margin classifier?
+
+It maximizes the margin of the hyperplane. This is the best hyperplane because it reduces the generalization error the most. If we add new data, the Maximum Margin Classifier is the best hyperplane to correctly classify the new data.
+
+#### 8. What is a kernel in SVM? Why do we use kernels in SVM?
+
+SVM algorithms use a set of mathematical functions that are defined as the kernel. The function of kernel is to take data as input and transform it into the required form. These functions can be different types. For example linear, nonlinear, polynomial, radial basis function (RBF), and sigmoid.
+
+#### 9. What is a similarity function in SVM? Why it is named so?
+
+Given two vectors, the similarity is the length of the projection of one vector on another. Another interesting kernel examples is Gaussian kernel.
+ 
+#### 10. How are the landmarks initially chosen in an SVM? How many and where?
+
+#### 11. Can we apply the kernel trick to logistic regression? Why is it not used in practice then?
+
+The kernel trick avoids the explicit mapping that is needed to get linear learning algorithms to learn a nonlinear function or decision boundary. For all and in the input space , certain functions can be expressed as an inner product in another space . The function is often referred to as a kernel or a kernel function.
+
+#### 12. What is the difference between logistic regression and SVM without a kernel?
+
+SVM tries to find the widest possible separating margin, while Logistic Regression optimizes the log likelihood function, with probabilities modeled by the sigmoid function.
+
+#### 13. How does the SVM parameter C affect the bias/variance trade off?
+
+The support vector machine algorithm has low bias and high variance, but the trade-off can be changed by increasing the C parameter that influences the number of violations of the margin allowed in the training data which increases the bias but decreases the variance.
+
+#### 14. How does the SVM kernel parameter sigma² affect the bias/variance trade off?
+
+#### 15. Can any similarity function be used for SVM?
+
+The similarity is the length of the projection of one vector on another. Another interesting kernel examples is Gaussian kernel.
+
+#### 16. Logistic regression vs. SVMs: When to use which one?
+
+So, you can typically expect SVM to perform marginally better than logistic regression. SVM try to maximize the margin between the closest support vectors while LR the posterior class probability. Thus, SVM find a solution which is as fare as possible for the two categories while LR has not this property.
+
+
+
+
 ## Evaluation of Machine Learning systems
 
 #### 1. What are accuracy, sensitivity, specificity, ROC?
@@ -144,7 +279,44 @@ A t-test is a type of inferential statistic used to determine if there is a sign
 
 K-means clustering is a type of unsupervised learning, which is used when you have unlabeled data (i.e., data without defined categories or groups). The algorithm works iteratively to assign each data point to one of K groups based on the features that are provided.
 
-#### 2. 
+#### 2. What is distortion function? Is it convex or non-convex?
+
+A non-convex optimization problem is any problem where the objective or any of the constraints are non-convex, as pictured below. Such a problem may have multiple feasible regions and multiple locally optimal points within each region.
+
+#### 3. Tell me about the convergence of the distortion function.
+
+#### 4. Topic: EM algorithm
+
+The EM algorithm is a general procedure to estimate the parameters in a model with latent (unobserved) factors. 
+
+#### 5. What is the Gaussian Mixture Model?
+
+Gaussian mixture models are a probabilistic model for representing normally distributed subpopulations within an overall population. 
+
+#### 6. Describe the EM algorithm intuitively.
+
+It works by choosing random values for the missing data points, and using those guesses to estimate a second set of data. The new values are used to create a better guess for the first set, and the process continues until the algorithm converges on a fixed point.
+
+#### 7. What are the two steps of the EM algorithm
+
+E-step: perform probabilistic assignments of each data point to some class based on the current hypothesis h for the distributional class parameters;
+M-step: update the hypothesis h for the distributional class parameters based on the new data assignments.
+
+## Dimensionality Reduction
+
+#### 1. Why do we need dimensionality reduction techniques?
+
+It reduces the time and storage space required. Removal of multi-collinearity improves the interpretation of the parameters of the machine learning model. It becomes easier to visualize the data when reduced to very low dimensions such as 2D or 3D.
+
+#### 2. What do we need PCA and what does it do?
+
+Principal Component Analysis (PCA) is a dimension-reduction tool that can be used to reduce a large set of variables to a small set that still contains most of the information in the large set.
+
+#### 3. What is the difference between logistic regression and PCA?
+
+PCA will NOT consider the response variable but only the variance of the independent variables.
+Logistic Regression will consider how each independent variable impact on response variable.
+
 
 
 
