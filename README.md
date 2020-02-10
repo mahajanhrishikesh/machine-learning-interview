@@ -124,6 +124,30 @@ Eigendecomposition of a matrix is a type of decomposition that involves decompos
 
 
 
+## Evaluation of Machine Learning systems
+
+#### 1. What are accuracy, sensitivity, specificity, ROC?
+
+Sensitivity, Specificity, and Accuracy, ROC are the terms which are most commonly associated with a Binary classification test and they statistically measure the performance of the test. 
+
+#### 2. What are precision and recall?
+
+Precision can be seen as a measure of exactness or quality, whereas recall is a measure of completeness or quantity. In simple terms, high precision means that an algorithm returned substantially more relevant results than irrelevant ones, while high recall means that an algorithm returned most of the relevant results.
+
+#### 3. Describe t-test in the context of Machine Learning.
+
+A t-test is a type of inferential statistic used to determine if there is a significant difference between the means of two groups, which may be related in certain features.
+
+## Clustering
+
+#### 1. Describe the k-means algorithm.
+
+K-means clustering is a type of unsupervised learning, which is used when you have unlabeled data (i.e., data without defined categories or groups). The algorithm works iteratively to assign each data point to one of K groups based on the features that are provided.
+
+#### 2. 
+
+
+
 
 
 ## Basics of Probability and Information Theory
