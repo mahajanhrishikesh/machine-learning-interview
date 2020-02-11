@@ -256,9 +256,56 @@ The similarity is the length of the projection of one vector on another. Another
 
 So, you can typically expect SVM to perform marginally better than logistic regression. SVM try to maximize the margin between the closest support vectors while LR the posterior class probability. Thus, SVM find a solution which is as fare as possible for the two categories while LR has not this property.
 
+## Bayesian Machine Learning
 
+#### 1. What are the differences between “Bayesian” and “Freqentist” approach for Machine Learning?
 
+The key difference between Bayesian and frequentist approaches lies in the definition of a probability, so if it is necessary to treat probabilties strictly as a long run frequency then frequentist approaches are reasonable, if it isn't then you should use a Bayesian approach.
 
+#### 2. Compare and contrast maximum likelihood and maximum a posteriori estimation.
+
+MLE gives you the value which maximises the Likelihood P(D|θ). And MAP gives you the value which maximises the posterior probability P(θ|D).
+
+#### 3. How does Bayesian methods do automatic feature selection?
+
+#### 4. What do you mean by Bayesian regularization?
+
+Bayesian regularization is a mathematical process that converts a nonlinear regression into a "well-posed" statistical problem in the manner of a ridge regression.
+
+#### 5. When will you use Bayesian methods instead of Frequentist methods?
+
+1. Use of priors
+2. Bayesian analysis tells us both how likely version A is to be the winner and by how much
+3. Bayesian analysis can be more robust to outliers, by using more flexible distributions
+4. Bayesian analysis does not require to pick a bunch of thresholds in advance to formulate a valid hypothesis
+
+## Regularization
+
+#### 1. What is L1 regularization?
+
+The L1 regularization adds a penalty equal to the sum of the absolute value of the coefficients. The L1 regularization will shrink some parameters to zero. Hence some variables will not play any role in the model, L1 regression can be seen as a way to select features in a model.
+
+#### 2. What is L2 regularization?
+
+The L2 regularization adds a penalty equal to the sum of the squared value of the coefficients. The L2 regularization will force the parameters to be relatively small, the bigger the penalization, the smaller (and the more robust) the coefficients are.
+
+#### 3. Compare L1 and L2 regularization.
+
+The difference between the L1 and L2 is just that L2 is the sum of the square of the weights, while L1 is just the sum of the weights. L1 helps perform feature selection in sparse feature spaces.Feature selection is to know which features are helpful and which are redundant. L2 has one very important advantage to L1, and that is invariance to rotation and scale. This is especially important in geographical / physical application.
+
+#### 4. Why does L1 regularization result in sparse models?
+
+The reason for using L1 norm to find a sparse solution is due to its special shape. It has spikes that happen to be at sparse points. Using it to touch the solution surface will very likely to find a touch point on a spike tip and thus a sparse solution.
+
+#### 5. What is dropout?
+
+Dropout is a technique used to prevent a model from overfitting. Dropout works by randomly setting the outgoing edges of hidden units (neurons that make up hidden layers) to 0 at each update of the training phase.
+
+#### 6. How will you implement dropout during forward and backward pass?
+
+In forward propagation, inputs are set to zero with probability 𝑝, and otherwise scaled up by 11−𝑝.
+In backward propagation, gradients for the same dropped units are zeroed out; other gradients are scaled up by the same 11−𝑝.
+ 
 ## Evaluation of Machine Learning systems
 
 #### 1. What are accuracy, sensitivity, specificity, ROC?
