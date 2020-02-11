@@ -1,6 +1,8 @@
 # Machine Learning Interview Questions and Answers
 
-This list was compiled while preparing for AI Residency programs in Google, Facebook, Microsoft, Uber etc.
+This list was compiled while preparing for AI Residency programs in Google, Facebook, Microsoft, Uber etc. The questions have been borrowed from [https://medium.com/subhrajit-roy/cracking-the-machine-learning-interview-1d8c5bb752d8](https://medium.com/subhrajit-roy/cracking-the-machine-learning-interview-1d8c5bb752d8).
+
+## If this repository helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
 ## Linear Algebra
 
@@ -642,5 +644,16 @@ An approximate algorithm is a way of dealing with NP-completeness for optimizati
 
 Monte Carlo algorithm is a randomized algorithm whose output may be incorrect with a certain (typically small) probability.
 
+## Citing
 
+```
+@misc{Abhinav:2020,
+  Author = {Abhinav Sagar},
+  Title = {Machine Learning Interview Questions and Answers},
+  Year = {2020},
+  Publisher = {GitHub},
+  Journal = {GitHub repository},
+  Howpublished = {\url{https://github.com/abhinavsagar/machine-learning-interview}}
+}
+```
 
